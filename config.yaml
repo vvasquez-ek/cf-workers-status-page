@@ -31,3 +31,62 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
+  
+  - id: prueba2-explork-cl
+    name: Prueba Inducción
+    description: 'Prueba Inducción Angloamerican'
+    url: 'https://prueba2.explor-k.cl/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: prueba-agua-explork-cl
+    name: Prueba Ruta Aguas
+    description: 'Prueba Ruta Aguas Angloamerican'
+    url: 'https://prueba.agua.explor-k.cl/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: cursoam-explork-cl
+    name: Toma de Hora AA
+    description: 'Agendamiento Angloamerican'
+    url: 'https://cursoam.explor-k.cl/'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: reservasqm-explork-cl
+    name: Toma de Hora SQM
+    description: 'Agendamiento SQM'
+    url: 'https://reservasqm.explor-k.cl/'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: induccionsqm-explork-cl
+    name: Inducción SQM
+    description: 'Prueba Inducción SQM'
+    url: 'https://induccionsqm.explor-k.cl/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: webcontrol-anglochile-cl
+    name: WebControl Front
+    description: 'Web WC Angloamerican'
+    url: 'https://webcontrol.anglochile.cl/saac/'
+    method: GET
+    expectStatus: 200
+    followRedirect: true
+    linkable: true
+
+  - id: wccheck-explork-cl
+    name: API WebControl
+    description: 'Api WebControl Explor-K'
+    url: 'https://wccheck.explor-k.cl/WcCheck/'
+    method: GET
+    expectStatus: 200
+    linkable: true
