@@ -64,13 +64,13 @@ export async function notifySlack(monitor, operational) {
 }
 
 export async function notifyTelegram(monitor, operational) {
-  const text = `Monitor *${monitor.name.replaceAll(
+  const text = `El monitor *${monitor.name.replaceAll(
     '-',
     '\\-',
-  )}* changed status to *${getOperationalLabel(operational)}*
+  )}* ha cambiado su estado a *${getOperationalLabel(operational)}*
   ${operational ? '✅' : '❌'} \`${monitor.method ? monitor.method : 'GET'} ${
     monitor.url
-  }\` \\- 👀 [Status Page](${config.settings.url})`
+  }\` \\- 👀 [Página de estados](${config.settings.url})`
 
   const payload = new FormData()
   payload.append('chat_id', SECRET_TELEGRAM_CHAT_ID)
@@ -96,7 +96,7 @@ export async function notifyDiscord(monitor, operational) {
         }`,
         description: `\`${monitor.method ? monitor.method : 'GET'} ${
           monitor.url
-        }\` - :eyes: [Status Page](${config.settings.url})`,
+        }\` - :eyes: [Página de estados](${config.settings.url})`,
         color: operational ? 3581519 : 13632027,
       },
     ],
