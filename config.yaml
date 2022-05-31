@@ -2,7 +2,7 @@ settings:
   title: 'Estados de los Servicios'
   url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo_explor-k.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
+  daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'Todos los Servicios Operativos'
