@@ -37,3 +37,9 @@ monitors:
     url: 'https://blog.cloudflare.com/'
     method: GET
     expectStatus: 200
+    
+  - id: dashboard-explork-cl
+    name: Dashboard Explor-K
+    url: 'https://dashboard.explor-k.cl/'
+    method: GET
+    expectStatus: 200
