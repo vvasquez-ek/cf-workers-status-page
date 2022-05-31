@@ -90,11 +90,11 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         })}
         <div className="flex flex-row justify-between mt-4 text-sm">
           <div>
-            Powered by{' '}
+            Con el soporte de{' '}
             <a href="https://workers.cloudflare.com/" target="_blank">
               Cloudflare Workers{' '}
             </a>
-            &{' '}
+            y{' '}
             <a href="https://flareact.com/" target="_blank">
               Flareact{' '}
             </a>
@@ -104,7 +104,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
               href="https://github.com/eidam/cf-workers-status-page"
               target="_blank"
             >
-              Get Your Status Page
+              Fuente
             </a>
           </div>
         </div>
