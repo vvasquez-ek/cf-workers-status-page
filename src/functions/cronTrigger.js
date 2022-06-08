@@ -98,6 +98,16 @@ export async function processCronTrigger(event) {
       event.waitUntil(notifyDiscord(monitor, monitorOperational))
     }
 
+    // Send Mail on monitor change
+    if (
+      monitorStatusChanged &&
+      typeof SECRET_MAIL_ACCOUNT !== 'undefined' &&
+      SECRET_MAIL_ACCOUNT !== 'default-gh-action-secret'
+    ) {
+      event.waitUntil(notifyMail(monitor, monitorOperational))
+    }
+    
+
     // make sure checkDay exists in checks in cases when needed
     if (
       (config.settings.collectResponseTimes || !monitorOperational) &&

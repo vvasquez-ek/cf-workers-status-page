@@ -84,6 +84,34 @@ export async function notifyTelegram(monitor, operational) {
   })
 }
 
+//Notification MAIL
+export async function notifyMail(monitor, operational) {
+  const text = `El monitor <b>${monitor.name.replaceAll(
+    '-',
+    '\\-',
+  )}</b> ha cambiado su estado a <b>${getOperationalLabel(operational)}</b>
+  ${operational ? '✅' : '❌'} \`${monitor.method ? monitor.method : 'GET'} ${
+    monitor.url
+  }\` \\- 👀 [Página de estados](${config.settings.url})`;
+  const payload = {
+    token: `${SECRET_MAIL_TOKEN}`,
+    user: `${SECRET_MAIL_ACCOUNT}`,
+    pass: `${SECRET_MAIL_PASSWORD}`,
+    from: 'Reporte Status Page',
+    receiver: `${SECRET_MAIL_RECEIVER}`,
+    subject: `Monitor ${monitor.name.replaceAll(
+      '-',
+      '\\-',
+    )} - ${getOperationalLabel(operational)}`,
+    body: text,
+  }
+  return fetch('https://mailer.explor-k.cl', {
+    body: JSON.stringify(payload),
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  })
+}
+
 // Visualize your payload using https://leovoel.github.io/embed-visualizer/
 export async function notifyDiscord(monitor, operational) {
   const payload = {
