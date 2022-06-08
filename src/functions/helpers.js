@@ -94,11 +94,12 @@ export async function notifyMail(monitor, operational) {
     monitor.url
   }\` \\- 👀 [Página de estados](${config.settings.url})`;
   const payload = {
-    token: `${SECRET_MAIL_TOKEN}`,
-    user: `${SECRET_MAIL_ACCOUNT}`,
-    pass: `${SECRET_MAIL_PASSWORD}`,
-    from: 'Reporte Status Page',
-    receiver: `${SECRET_MAIL_RECEIVER}`,
+    token: SECRET_MAIL_TOKEN,
+    user: SECRET_MAIL_ACCOUNT,
+    pass: SECRET_MAIL_PASSWORD,
+    from: "Reporte Status Page",
+    receiver: SECRET_MAIL_RECEIVER,
+    receiverName:"ID",
     subject: `Monitor ${monitor.name.replaceAll(
       '-',
       '\\-',
