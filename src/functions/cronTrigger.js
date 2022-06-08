@@ -3,6 +3,7 @@ import config from '../../config.yaml'
 import {
   notifySlack,
   notifyTelegram,
+  notifyMail,
   getCheckLocation,
   getKVMonitors,
   setKVMonitors,
